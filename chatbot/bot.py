@@ -10,7 +10,7 @@ import os
 embeddings = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
 
 # Connect to Pinecone
-os.environ['PINECONE_API_KEY'] = "d6207783-6add-418a-8f60-9001e08e4c25"
+os.environ['PINECONE_API_KEY'] = "API-KEY"
 index_name = "rs-chatbot"
 vector_database_index = Pinecone.from_existing_index(index_name, embeddings)
 
