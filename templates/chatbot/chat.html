@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProdBot</title>
+    <link rel="stylesheet" href="{% static 'chatbot/css/styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <div class="chat-container">
+        <div id="chatbox" class="chat-box">
+            <p class="bot-message"><i class="fas fa-robot fa-lg"></i> Hey! How can i help you?</p>
+        </div>
+        <form id="chatform" class="chat-form" action="/get-response/" method="post">
+            {% csrf_token %}
+            <input type="text" name="query_sent" id="query_sent" class="input-field"
+                placeholder="Type here what you want?" required>
+            <button type="submit" class="submit-button"><i class="fas fa-paper-plane"></i></button>
+        </form>
+    </div>
+
+    <div class="history-container">
+        <button class="new-chat-button"><i class="fas fa-plus"></i> New Chat </button>       
+        <button class="logout-button"><i class="fas fa-user"></i> Log out</button>
+        <div class="recent-chats">
+            <!-- add recent chat history here -->
+        </div>
+        <div class="user-info">
+            <img src="https://wallpapers.com/images/featured-full/cute-naruto-jtmjd4ifiqi7a48s.jpg"
+                alt="User Icon" class="user-icon">
+            <div class="user-name">Kazi Ferdous Hasan</div>
+        </div>
+        <button class="logout-button"><i class="fas fa-user"></i> Log out</button>
+        <div class="copyright-text">Copyright © 2024 ProdBot</div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'chatbot/js/script.js' %}"></script>
+</body>
+</html>

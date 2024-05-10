@@ -1,0 +1,195 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #162431;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Chat container */
+.chat-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 400px;
+    position: relative;
+    height: 200px; /* Adjust this value to your liking */
+    overflow-y: auto; /* Add this line */
+  
+}
+
+/* History container */
+.history-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 400px;
+    position: relative;
+    height: 200px; /* Adjust this value to your liking */
+    overflow-y: auto; /* Add this line */
+    margin-left: 20px; /* Add some margin between the containers */
+}
+
+/* New chat button */
+.new-chat-button {
+    display: block;
+    width: 50%;
+    padding: 10px;
+    background-color: #01182e;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    margin-left: 100px;
+    border: none;
+}
+.new-chat-button:hover {
+    background-color: #082842;
+}
+
+/* User info */
+.user-info {
+    position: absolute;
+    top: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    display: block;
+}
+
+.user-icon {
+    width: 50px; /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+    border-radius: 50%; /* Makes the image round */
+    margin-bottom: 5px;
+}
+
+.user-name {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Log out button */
+.logout-button {
+    position: absolute;
+    width: 50%;
+    bottom: 60px; /* Adjusted to make space for copyright text */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    background-color: #01182e;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50px;
+    border: none;
+}
+
+
+.logout-button:hover {
+    background-color: #082842;
+}
+
+
+/* Chat box */
+.chat-box {
+    flex: 1;
+    padding: 20px;
+    overflow-y: scroll; /* Add this line */
+    /* Adjust this value to your liking */
+}
+
+.chat-box p {
+    margin: 10px 0;
+    padding: 5px;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+}
+
+.user-message, .bot-message {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.user-message {
+    justify-content: flex-end;
+    color: rgb(234, 255, 246);
+}
+
+/* Copyright text */
+.copyright-text {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 12px;
+}
+
+.bot-message {
+    justify-content: flex-start;
+    color: rgb(234, 255, 246);
+}
+
+.user-message i, .bot-message i {
+    margin: 0 10px;
+}
+
+
+/* Chat form */
+.chat-form {
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Center the elements horizontally */
+    align-items: center; /* Center the elements vertically */
+    background-color: transparent;
+    position: absolute;
+    bottom: 0;
+    width: 95%;
+}
+
+.input-field {
+    flex: 0.8;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    margin-right: 10px; /* Add some margin between input field and button */
+}
+
+.submit-button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    background-color: #01182e;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #082842;
+}
+
+.submit-button:focus {
+    outline: none;
+}
